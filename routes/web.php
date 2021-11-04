@@ -1,5 +1,6 @@
 <?php
-
+use App\Http\Controllers\FormController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,4 +20,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('form', FormController::class);
+Route::get('get-form-field', [FormController::class, 'getFormField'])->name('get-form-fields');
+Route::get('view-form/{id}', [HomeController::class, 'viewForm'])->name('view-form');
