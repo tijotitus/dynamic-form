@@ -1,5 +1,5 @@
 
-## Generate Dynamic Forms with Laravel 8, jquery and Bootstrap 4.
+## Laravel project to manage a dynamic form
 
 ## How to run
 
